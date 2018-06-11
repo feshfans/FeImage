@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Application-->
+        <scene sceneID="JPo-4y-FX3">
+            <objects>
+                <application id="hnw-xV-0zn" sceneMemberID="viewController">
+                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+                        <items>
+                            <menuItem title="FeImage" id="1Xt-HY-uBw">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="FeImage" systemMenu="apple" id="uQy-DD-JDr">
+                                    <items>
+                                        <menuItem title="关于 FeImage" id="5kV-Vb-QxS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="aJh-i4-bef"/>
+                                        <menuItem title="退出" keyEquivalent="q" id="4sb-4s-VLi">
+                                            <connections>
+                                                <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="文件" id="OJC-ve-fch">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="文件" id="9dM-jF-TXt">
+                                    <items>
+                                        <menuItem title="打开图片" keyEquivalent="n" allowsKeyEquivalentWhenHidden="YES" id="jt9-9w-IGm">
+                                            <connections>
+                                                <action selector="selectImagesFromMenuWithSender:" target="Ady-hI-5gd" id="qlL-WA-sWD"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="打开文件夹" keyEquivalent="d" allowsKeyEquivalentWhenHidden="YES" id="gDX-El-OFj">
+                                            <connections>
+                                                <action selector="selectImageDirFromMenuWithSender:" target="Ady-hI-5gd" id="1eu-Sj-XOd"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="下一张" keyEquivalent="" allowsKeyEquivalentWhenHidden="YES" id="bbe-8z-Ga3">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="nextImageWithSender:" target="Ady-hI-5gd" id="m4q-pB-VfO"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="上一张" keyEquivalent="" allowsKeyEquivalentWhenHidden="YES" id="NVm-La-Ido">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="preImageWithSender:" target="Ady-hI-5gd" id="dtC-Ib-47i"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="放大" allowsKeyEquivalentWhenHidden="YES" id="id3-Dn-XEh">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="缩小" allowsKeyEquivalentWhenHidden="YES" id="w7n-Uh-NIo">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Help" id="wpr-3q-Mcd">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
+                                    <items>
+                                        <menuItem title="FeImage Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                            <connections>
+                                                <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
+                    </connections>
+                </application>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="FeImage" customModuleProvider="target"/>
+                <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+                <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-848" y="-165"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="R2V-B0-nI4">
+            <objects>
+                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                    <window key="window" title="Feshfans Image" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" fullSizeContentView="YES"/>
+                        <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
+                        <rect key="contentRect" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <toolbar key="toolbar" implicitIdentifier="EDB19D01-B368-487C-AFEB-07816DD86230" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="regular" id="YHH-RH-GPj">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="wd4-By-iT0"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="6iw-gn-K6v"/>
+                                <toolbarItem implicitItemIdentifier="F48FF7C5-F364-4E68-BA1C-DA4F4D2B323E" label="Files" paletteLabel="Files" tag="-1" image="file" id="aO7-T5-kV3">
+                                    <connections>
+                                        <action selector="selectImagesFromToolBarWithSender:" target="Oky-zY-oP4" id="zsO-Vf-BdA"/>
+                                    </connections>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="CB446604-E257-42C8-AF59-8A5EE189512F" label="Directory" paletteLabel="Directory" tag="-1" image="directory" id="4x6-xk-0TI">
+                                    <connections>
+                                        <action selector="selectImageDirFromToolBarWithSender:" target="Oky-zY-oP4" id="75Y-1O-xDH"/>
+                                    </connections>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="B361D2C2-B9E3-4D25-A5C0-8BC391E7DE14" label="ZoomIn" paletteLabel="ZoomIn" tag="-1" image="ZoomIn" id="WJ2-Kn-WGT"/>
+                                <toolbarItem implicitItemIdentifier="CA8EBFBD-83A8-49AC-BD9D-DD74BF7B9FBB" label="ZoomOut" paletteLabel="ZoomOut" tag="-1" image="ZoomOut" id="jFZ-49-N8I"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="Zho-Ig-ggM"/>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="aO7-T5-kV3"/>
+                                <toolbarItem reference="4x6-xk-0TI"/>
+                                <toolbarItem reference="WJ2-Kn-WGT"/>
+                                <toolbarItem reference="jFZ-49-N8I"/>
+                                <toolbarItem reference="6iw-gn-K6v"/>
+                                <toolbarItem reference="Zho-Ig-ggM"/>
+                            </defaultToolbarItems>
+                        </toolbar>
+                        <connections>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                    </connections>
+                </windowController>
+                <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-848" y="31"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hIz-AP-VOD">
+            <objects>
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="FeImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <splitView key="view" arrangesAllSubviews="NO" dividerStyle="thin" vertical="YES" id="4SQ-tT-R1S">
+                        <rect key="frame" x="0.0" y="0.0" width="977" height="670"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <subviews>
+                            <customView canDrawConcurrently="YES" fixedFrame="YES" id="auu-1Z-Z0w">
+                                <rect key="frame" x="0.0" y="0.0" width="210" height="670"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <subviews>
+                                    <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fE7-6A-4zn">
+                                        <rect key="frame" x="0.0" y="0.0" width="210" height="670"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <clipView key="contentView" ambiguous="YES" id="3Yb-Rn-Uhr">
+                                            <rect key="frame" x="1" y="1" width="208" height="668"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ogs-1J-PqR">
+                                                    <rect key="frame" x="0.0" y="0.0" width="193" height="653"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </clipView>
+                                        <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="qvO-tx-yuH">
+                                            <rect key="frame" x="1" y="653" width="208" height="16"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="JKx-xt-dcq">
+                                            <rect key="frame" x="193" y="1" width="16" height="668"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                    </scrollView>
+                                </subviews>
+                            </customView>
+                            <customView fixedFrame="YES" id="M9B-HV-wMs">
+                                <rect key="frame" x="211" y="0.0" width="766" height="670"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <subviews>
+                                    <splitView fixedFrame="YES" arrangesAllSubviews="NO" dividerStyle="thin" translatesAutoresizingMaskIntoConstraints="NO" id="TAv-jd-dXy">
+                                        <rect key="frame" x="0.0" y="0.0" width="766" height="670"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <subviews>
+                                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" id="lyb-cu-Hxu">
+                                                <rect key="frame" x="0.0" y="0.0" width="766" height="670"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="oOA-aF-OAL"/>
+                                            </imageView>
+                                        </subviews>
+                                        <holdingPriorities>
+                                            <real value="250"/>
+                                        </holdingPriorities>
+                                    </splitView>
+                                </subviews>
+                            </customView>
+                        </subviews>
+                        <holdingPriorities>
+                            <real value="250"/>
+                            <real value="250"/>
+                        </holdingPriorities>
+                    </splitView>
+                    <connections>
+                        <outlet property="contentImageView" destination="lyb-cu-Hxu" id="Efm-vi-5ZP"/>
+                        <outlet property="imagesSummary" destination="auu-1Z-Z0w" id="bgK-QY-HFZ"/>
+                        <outlet property="scrollView" destination="fE7-6A-4zn" id="hZe-6Y-TBf"/>
+                    </connections>
+                </viewController>
+                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="kK9-Zu-y2d"/>
+            </objects>
+            <point key="canvasLocation" x="-847.5" y="651"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ZoomIn" width="72" height="72"/>
+        <image name="ZoomOut" width="72" height="72"/>
+        <image name="directory" width="30.719999313354492" height="30.719999313354492"/>
+        <image name="file" width="30.719999313354492" height="30.719999313354492"/>
+    </resources>
+</document>
